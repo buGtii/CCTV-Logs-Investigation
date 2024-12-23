@@ -27,9 +27,9 @@ Initial query to display all logs: index=*.
 Step 2: Parsing the Logs
 Problem: Logs were unreadable in their raw format.
 Solution: Created a custom regex to extract critical fields such as timestamp, event type, user ID, username, and session ID.
-Regex Pattern:
 
-^(?P<timestamp>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) (?P<Event>\w+( \w+)?) (?P<user_id>\d+)? (?P<UserName>\w+) .*?(?P<Session_id>\w+)$
+Regex Pattern:
+"" ^(?P<timestamp>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) (?P<Event>\w+( \w+)?) (?P<user_id>\d+)? (?P<UserName>\w+) .*?(?P<Session_id>\w+)$ ""
 Used Splunk's Field Extraction tool for implementation.
 
 Step 3: Analyzing CCTV Logs
